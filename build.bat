@@ -14,4 +14,4 @@ REM to use the php build tool do:
 REM php -f %BUILDTOOLS%\Beeld.php --  --config=".\beeld.config" --tasks=build
 
 REM to use the node build tool do:
-node %BUILDTOOLS%\Beeld.js  --config ".\beeld.config" --tasks build
+node e:\jscodes\Beeld\Beeld.js  --config ".\beeld.config" --tasks build

@@ -118,3 +118,18 @@ Also the API architecture is setup for more modifiers to be added (even custom o
 * [AjaxListener.js](https://github.com/foo123/AjaxListener.js): Listen to any AJAX event on page with JavaScript, even by other scripts
 * [asynchronous.js](https://github.com/foo123/asynchronous.js) simple manager for asynchronous, linear, parallel, sequential and interleaved tasks for JavaScript
 * [classy.js](https://github.com/foo123/classy.js) Object-Oriented mini-framework for JavaScript
+
+
+编译
+
+```shell
+git clone https://github.com/foo123/Beeld
+
+
+npm install uglify-js -g
+
+build-min.bat
+
+```
+
+build.bar
