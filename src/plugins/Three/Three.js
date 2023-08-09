@@ -114,17 +114,22 @@ MeshThree = MOD3.Class(MOD3.MeshProxy, {
     // use a batch update, instead of update vertex by vertex (faster??)
     update: function() {
         var self = this, geometry = self.mesh.geometry;
-        // three.js r78 geometry update flags
-        geometry.verticesNeedUpdate = true;
-        geometry.elementsNeedUpdate = true;
-        geometry.uvsNeedUpdate = true;
-        geometry.normalsNeedUpdate = true;
-        geometry.colorsNeedUpdate = true;
-        geometry.lineDistancesNeedUpdate = true;
-        geometry.groupsNeedUpdate = true;
-        // three.js r66 geometry update flags
-        geometry.buffersNeedUpdate = true;
-        geometry.dynamic = true;
+        if(geometry.fromGeometry) {
+            // three.js r144
+            geometry.fromGeometry();
+        } else {
+            // three.js r78 geometry update flags
+            geometry.verticesNeedUpdate = true;
+            geometry.elementsNeedUpdate = true;
+            geometry.uvsNeedUpdate = true;
+            geometry.normalsNeedUpdate = true;
+            geometry.colorsNeedUpdate = true;
+            geometry.lineDistancesNeedUpdate = true;
+            geometry.groupsNeedUpdate = true;
+            // three.js r66 geometry update flags
+            geometry.buffersNeedUpdate = true;
+            geometry.dynamic = true;
+        }
         return self;
     },
 
